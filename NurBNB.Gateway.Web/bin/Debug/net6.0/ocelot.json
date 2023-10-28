@@ -1,0 +1,56 @@
+{
+  "Routes": [
+    {
+      "Key": "api-users",
+      "UpstreamPathTemplate": "/api/users",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com/users",
+          "Port": 443
+        }
+      ]
+    },
+    {
+      "Key": "api-posts",
+      "UpstreamPathTemplate": "/api/posts",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/posts",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com/posts",
+          "Port": 443
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/security/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/security/login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7117
+        }
+      ]
+    }
+  ],
+
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "api-users",
+        "api-posts"
+      ],
+      "UpstreamPathTemplate": "/api/user-post",
+      "Aggregator": "GatewayAggregator"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7002"
+  }
+}

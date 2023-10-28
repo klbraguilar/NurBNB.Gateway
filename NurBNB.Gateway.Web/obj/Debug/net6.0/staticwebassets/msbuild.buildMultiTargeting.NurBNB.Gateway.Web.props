@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\NurBNB.Gateway.Web.props" />
+</Project>

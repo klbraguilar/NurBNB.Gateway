@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "G2PhcbsJXh/AJpX37FXfVApHlaetHCU0rk8JNM4usX4=",
+  "Source": "NurBNB.Gateway.Web",
+  "BasePath": "_content/NurBNB.Gateway.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
