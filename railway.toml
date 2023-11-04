@@ -1,7 +1,7 @@
 [build]
 builder = "dockerfile"
-dockerfilePath = "./MyAppProject/Dockerfile"
+dockerfilePath = "/NurBNB.Gateway/Dockerfile"
 
 [deploy]
-startCommand = "dotnet MyAppProject.dll"
+startCommand = "dotnet NurBNB.Gateway.Web.dll"
 restartPolicyType = "never"
