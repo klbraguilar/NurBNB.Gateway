@@ -1,6 +1,6 @@
 [build]
 builder = "dockerfile"
-dockerfilePath = "/NurBNB.Gateway/Dockerfile"
+dockerfilePath = "./NurBNB.Gateway/Dockerfile"
 
 [deploy]
 startCommand = "dotnet NurBNB.Gateway.Web.dll"
